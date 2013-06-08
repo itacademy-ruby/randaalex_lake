@@ -15,6 +15,9 @@ class Duck
 end
 
 class RealDuck < Duck
+  def name
+    'REAL'
+  end
   include Quacking
   include Swimming
   include Flying
@@ -29,11 +32,11 @@ end
 
 ducks ||= []
 ducks << RealDuck.new
-ducks << RubberDuck.new
-ducks << WoodDuck.new
+# ducks << RubberDuck.new
+# ducks << WoodDuck.new
 
 ducks.each do |duck|
-  puts "#{duck.class} #{duck.swim}"
+  puts "#{duck.name} #{duck.swim}"
   puts "#{duck.class} #{duck.quack}"
   puts "#{duck.class} #{duck.fly}"
 
